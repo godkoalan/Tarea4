@@ -5,7 +5,7 @@
 
 #### Inciso a):
 
-Inicialmente, se realiza la lectura de los bits suministrados mediante la función *csv.reader* de la librería *csv*. Dichos bits son convertidos a valores enteros mediante un ciclo y se guardan en un vector del mismo nombre. Posteriormente, se definen valores necesarios para realizar la simulación, como la frecuencia de la onda portadora, la cual es de 5000 *Hz*; el periodo de dicha onda, siendo éste de 20 *ms* y el número puntos de muestreo por período, definiéndose en 50.
+Inicialmente, se realiza la lectura de los bits suministrados mediante la función `csv.reader` de la librería *csv*. Dichos bits son convertidos a valores enteros mediante un ciclo y se guardan en un vector del mismo nombre. Posteriormente, se definen valores necesarios para realizar la simulación, como la frecuencia de la onda portadora, la cual es de 5000 *Hz*; el periodo de dicha onda, siendo éste de 20 *ms* y el número puntos de muestreo por período, definiéndose en 50.
 
 Una vez hecho esto, se grafica la señal portadora, la cual coresponde a una señal sinusoidal de 5000 *Hz* de frecuencia y una amplitud unitaria. Esta señal portadora está definida de la siguiente forma.
 
@@ -31,7 +31,7 @@ En la figura anterior es posible apreciar la señal modulada para los primero 10
 
 #### Inciso b):
 
-Inicialmente, se define la **potencia instantánea** de la señal como el cuadrado de la señal portadora. Esto es:
+Inicialmente, se define la **potencia instantánea** de la señal portadora como el cuadrado de dicha señal. Esto es:
 
 ![formula](https://render.githubusercontent.com/render/math?math=P_{inst}=sen^2(2\pi\f_pt))
 
@@ -40,6 +40,12 @@ Entonces, la **potencia promedio** se define como:
 
 ![formula](https://render.githubusercontent.com/render/math?math=P_{prom}=\frac{1}{2T}\int_{-T}^{T}P_{inst}dt)=
 ![formula](https://render.githubusercontent.com/render/math?math=\frac{1}{2T}\int_{-T}^{T}sen^2(2\pi\f_pt)dt)
+
+Con el fin de calcular la integral anterior, se utiliza el módulo `integrate` de `SciPy`, dividiéndo el resultado de la integral entre el tiempo total, siendo este de de 200 *s*. De este proceso se obtuvo un valor de potencia promedio de 0.4900009800019598 *W*.
+
+#### Inciso c):
+
+
 
 
 
