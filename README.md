@@ -49,7 +49,7 @@ Para realizar este inciso, se define una función en **Python** llamada `senalar
 
 ![formula](https://render.githubusercontent.com/render/math?math=P_{noise}=\frac{P_{signal}}{10^{\frac{SNR}{10}}})
 
-Para los valores de *SNR* se cre un vectro de `NumPy` llamado `snr`, el cuál contendrá los valores solicitados de *SNR*. Una vez hecho esto, se calcula la desviación estándar al tomar la raíz cuadrada de cada uno de los valores de *potencia del ruido* calculados para los distintos *SNR*. Estos valores de deviación estándar se guardan en un vector llamado `sigma`. Cada valor de `sigma` se utiliza para generar un vector de *ruido*, que posteriormente se suma entrada a entrada a la señal modulada. Estas señales con ruido se grafican y se presentan a continuación:
+Para los valores de *SNR* se cre un vectro de `NumPy` llamado `snr`, el cuál contendrá los valores solicitados de *SNR*. Una vez hecho esto, se calcula la desviación estándar al tomar la raíz cuadrada de cada uno de los valores de *potencia del ruido* calculados para los distintos *SNR*. Estos valores de deviación estándar se guardan en un vector llamado `sigma`. Cada valor de `sigma` se utiliza para generar un vector de *ruido* AWGN (additive white Gaussian noise), que posteriormente se suma entrada a entrada a la señal modulada. Estas señales con ruido se grafican y se presentan a continuación:
 
 ![SRN=-2](https://user-images.githubusercontent.com/66042916/86308162-b1954780-bbd5-11ea-811f-6a01b6ff4afb.png)
 
@@ -63,6 +63,23 @@ Para los valores de *SNR* se cre un vectro de `NumPy` llamado `snr`, el cuál co
 
 ![SRN=3](https://user-images.githubusercontent.com/66042916/86308163-b22dde00-bbd5-11ea-8a5d-ab67baedc3a6.png)
 
+#### Inciso d):
+
+Para graficar la densidad espectral de potencia se utiliza la función `welch` del módulo `signal` de `SciPy`. Esta función recibe como argumento la señal a la cual se le desa graficar la densidad espectral de potencia y la frecuencia de dicha señal. Se grafica la densidad espectral de potencia de la señal original, además de las señales a las cuáles se les aplicó el AWGN. Los resultados obtenidos se muestran a continuación:
+
+![densoriginal](https://user-images.githubusercontent.com/66042916/86308822-55cbbe00-bbd7-11ea-8179-378c01047e31.png)
+
+![dens-2](https://user-images.githubusercontent.com/66042916/86308819-55332780-bbd7-11ea-81ef-d550cec103ec.png)
+
+![dens-1](https://user-images.githubusercontent.com/66042916/86308817-549a9100-bbd7-11ea-8517-de7dd2aeb899.png)
+
+![dens0](https://user-images.githubusercontent.com/66042916/86308811-5401fa80-bbd7-11ea-99cb-2dda54d5c098.png)
+
+![dens1](https://user-images.githubusercontent.com/66042916/86308815-5401fa80-bbd7-11ea-9755-5ac6f594c2f5.png)
+
+![dens2](https://user-images.githubusercontent.com/66042916/86308818-55332780-bbd7-11ea-9716-27864b58da0f.png)
+
+![dens3](https://user-images.githubusercontent.com/66042916/86308821-55cbbe00-bbd7-11ea-98f1-373f67acdc51.png)
 
 
 
