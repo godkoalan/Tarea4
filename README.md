@@ -45,17 +45,23 @@ Con el fin de calcular la integral anterior, se utiliza el módulo `integrate` d
 
 #### Inciso c):
 
-Para realizar este inciso, se defines una función llamada `senalaruido`, la cual recibe un parámetro *x* que serían los valores de *SNR* y devuelve el valor de la *potencia del ruido* mediante la siguiente relación:
+Para realizar este inciso, se define una función en **Python** llamada `senalaruido`, la cual recibe un parámetro *x* que serían los valores de *SNR* y devuelve el valor de la *potencia del ruido* mediante la siguiente relación:
 
 ![formula](https://render.githubusercontent.com/render/math?math=P_{noise}=\frac{P_{signal}}{10^{\frac{SNR}{10}}})
 
+Para los valores de *SNR* se cre un vectro de `NumPy` llamado `snr`, el cuál contendrá los valores solicitados de *SNR*. Una vez hecho esto, se calcula la desviación estándar al tomar la raíz cuadrada de cada uno de los valores de *potencia del ruido* calculados para los distintos *SNR*. Estos valores de deviación estándar se guardan en un vector llamado `sigma`. Cada valor de `sigma` se utiliza para generar un vector de *ruido*, que posteriormente se suma entrada a entrada a la señal modulada. Estas señales con ruido se grafican y se presentan a continuación:
 
+![SRN=-2](https://user-images.githubusercontent.com/66042916/86308162-b1954780-bbd5-11ea-811f-6a01b6ff4afb.png)
 
+![SRN=-1](https://user-images.githubusercontent.com/66042916/86308158-b0641a80-bbd5-11ea-901c-805f128e2264.png)
 
+![SRN=0](https://user-images.githubusercontent.com/66042916/86308151-ae01c080-bbd5-11ea-9dc6-c007499837b0.png)
 
+![SRN=1](https://user-images.githubusercontent.com/66042916/86308155-afcb8400-bbd5-11ea-9996-019a5162a01c.png)
 
+![SRN=2](https://user-images.githubusercontent.com/66042916/86308159-b0fcb100-bbd5-11ea-8a94-5374464633d7.png)
 
-
+![SRN=3](https://user-images.githubusercontent.com/66042916/86308163-b22dde00-bbd5-11ea-8a5d-ab67baedc3a6.png)
 
 
 
