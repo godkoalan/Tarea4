@@ -1,5 +1,5 @@
 ## Modelos probabilísticos de Señales y Sistemas - IE0405
-### Tarea 3
+### Tarea 4
 ### Alan Umaña Castillo
 ### B77773
 
@@ -31,9 +31,15 @@ En la figura anterior es posible apreciar la señal modulada para los primero 10
 
 #### Inciso b):
 
+Inicialmente, se define la **potencia instantánea** de la señal como el cuadrado de la señal portadora. Esto es:
+
+![formula](https://render.githubusercontent.com/render/math?math=P_{inst}=sen^2(2\pi\f_pt))
+
+Entonces, la **potencia promedio** se define como:
 
 
-
+![formula](https://render.githubusercontent.com/render/math?math=P_{prom}=\frac{1}{2T}\int_{-T}^{T}P_{inst}dt)=
+![formula](https://render.githubusercontent.com/render/math?math=\frac{1}{2T}\int_{-T}^{T}sen^2(2\pi\f_pt)dt)
 
 
 
