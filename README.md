@@ -1,4 +1,4 @@
-## Modelos probabilísticos de Señales y Sistemas - IE0405
+## Modelos Probabilísticos de Señales y Sistemas - IE0405
 ### Tarea 4
 ### Alan Umaña Castillo
 ### B77773
@@ -45,7 +45,9 @@ Con el fin de calcular la integral anterior, se utiliza el módulo `integrate` d
 
 #### Inciso c):
 
+Para realizar este inciso, se defines una función llamada `senalaruido`, la cual recibe un parámetro *x* que serían los valores de *SNR* y devuelve el valor de la *potencia del ruido* mediante la siguiente relación:
 
+![formula](https://render.githubusercontent.com/render/math?math=P_{noise}=\frac{P_{signal}}{10^{\frac{SNR}{10}}})
 
 
 
