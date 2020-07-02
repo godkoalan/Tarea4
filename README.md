@@ -9,7 +9,7 @@ Inicialmente, se realiza la lectura de los bits suministrados mediante la funci�
 
 Una vez hecho esto, se grafica la señal portadora, la cual coresponde a una señal sinusoidal de 5000 *Hz* de frecuencia y una amplitud unitaria. Esta señal portadora está definida de la siguiente forma.
 
-![formula](https://render.githubusercontent.com/render/math?math=S_1(t)=sen(2\pif_pt))
+![formula](https://render.githubusercontent.com/render/math?math=S_1(t)=sen(2\pi\f_pt))
 
 ![portadora](https://user-images.githubusercontent.com/66042916/86303737-f915d680-bbc9-11ea-95e9-d737e55b3ee7.png)
 
