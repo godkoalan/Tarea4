@@ -81,10 +81,26 @@ Para graficar la densidad espectral de potencia se utiliza la función `welch` d
 
 ![dens3](https://user-images.githubusercontent.com/66042916/86308821-55cbbe00-bbd7-11ea-98f1-373f67acdc51.png)
 
+#### Inciso e):
 
+Para realizar la demodulación de la señal, primeramente se define una *pseudo-energía*, la cual se obtiene al sumar los cuadrados de los valores de la señal portadora, denotada con *Es*. Posteriormente se crea un vector de ceros llamado `bitsRx` donde se insertarán los bits resultantes de la demodulación. Ahora, para cada una de las señales con ruido que se graficaron en el inciso c), se calcula una *energía de prueba*, denominada *Ep*. Mediante ciclos `for`, se determina si *Ep* > *CEs*. La constante *C* representa un porcentaje de *Es*. Para la simulación realizada, se utiliza *C=0.5*, con el fin de determinar si la energía *Ep* es mayor al 50% de *Es* en un determinado período de tiempo. Si esta condición se cumple, se coloca un *1* en el vector `bitsRx`, y un *0* en caso contrario. 
 
+Una vez hecho esto, se procede a contar los errores cometidos en la demodulación de la señal. Para esto se comparan los bits presentes en `bitsRx` con los bits originales suministrados. A la suma de los errores se le asigna una variable llamada *err*. Con el valor de *err* para cada uno de las diferentes señales demoduladas, se calcula el *Bit Error Rate*, definido como *BER* mediante la fo´rmula que se muestra a continuación:
 
+![formula](https://render.githubusercontent.com/render/math?math=BER=\frac{err}{N}\cdot100)
 
+donde *N* representa la cantidad total de bits. Se multiplica por 100 con el fin de obtener un porcentaje. Los datos obtenidos de la demodulación se muestran en la siguiente tabla:
+
+| SNR (dB) | -2 | -1 | 0 | 1 | 2 | 3 |
+|---|---|---|---|---|---|---|
+| err | 16 | 4 | 2 | 0 | 0 | 0 |
+| BER (%)  | 0.16 | 0.04 | 0.02 | 0 | 0 | 0 |
+
+#### Inciso f):
+
+Una vez hecho esto, con los valores porcentuales de *BER* y los valores de *SNR*, se crea una gráfica de *BER*vs*SNR*, obteniendo el siguiente resultado:
+
+![SNRvsBER](https://user-images.githubusercontent.com/66042916/86310753-0471fd80-bbdc-11ea-80cc-e909a357da8c.png)
 
 
 
