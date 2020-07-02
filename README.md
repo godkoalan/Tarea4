@@ -9,4 +9,4 @@ Inicialmente, se realiza la lectura de los bits suministrados mediante la funci�
 
 Una vez hecho esto, se grafica la señal portadora, la cual coresponde a una señal sinusoidal de 5000 *Hz* de frecuencia y una amplitud unitaria. 
 
-![image](https://user-images.githubusercontent.com/66042916/85786838-e130e500-b6e7-11ea-8a76-723e18b2d816.png)
+![portadora](https://user-images.githubusercontent.com/66042916/86303737-f915d680-bbc9-11ea-95e9-d737e55b3ee7.png)
