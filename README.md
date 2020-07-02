@@ -20,3 +20,5 @@ Ahora, la modulación **BPSK** se basa en un cambio de fase de 180° en la onda 
 ![formula](https://render.githubusercontent.com/render/math?math=S_1(t)=sen(2\pi\f_pt)), si el bit de la señal moduladora es 1.
 
 ![formula](https://render.githubusercontent.com/render/math?math=S_0(t)=-sen(2\pi\f_pt)), si el bit de la señal moduladora es 0.
+
+La modulación se realiza mediante un ciclo en **Python**, tomando en cuenta las condiciones anteriormente mencionadas. 
